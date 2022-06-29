@@ -35,6 +35,10 @@ Route::middleware('guest')->group(function(){
         return view('signup');
     })->name('signup');
 
+    Route::get('/landing', function () {
+        return view('landing');
+    })->name('landing');
+
     // Route::get('/logout', 'UserController@logout')->name('logout');
 
     

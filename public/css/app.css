@@ -818,6 +818,9 @@ select {
 .z-0 {
   z-index: 0;
 }
+.float-right {
+  float: right;
+}
 .float-left {
   float: left;
 }
@@ -1001,6 +1004,9 @@ select {
 }
 .-ml-px {
   margin-left: -1px;
+}
+.ml-20 {
+  margin-left: 5rem;
 }
 .box-border {
   box-sizing: border-box;
@@ -1769,6 +1775,14 @@ select {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -1870,6 +1884,10 @@ select {
 }
 .text-5xl {
   font-size: 3rem;
+  line-height: 1;
+}
+.text-6xl {
+  font-size: 3.75rem;
   line-height: 1;
 }
 .font-bold {

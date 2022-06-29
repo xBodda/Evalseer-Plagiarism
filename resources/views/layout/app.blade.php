@@ -43,18 +43,22 @@
             <a href="{{ route('home') }}">
                 <p class="text-white font-bold cursor-pointer mr-6">HOME</p>
             </a>
-            @if(Auth::user()->hasRole('admin') || Auth::user()->hasRole('instructor') || Auth::user()->hasRole('teaching-assistant'))
-            <a href="/dashboard/">
-                {{-- {{ Auth::user()->getRoleNames() }} --}}
-                <p class="text-white font-bold cursor-pointer mr-6">DASHBOARD</p>
-            </a>
-            @endif
-            {{-- <p class="text-white font-bold cursor-pointer mr-6">EDUCATION</p>
+            @if (Auth::user() != null)
+              @if(Auth::user()->hasRole('admin') || Auth::user()->hasRole('instructor') || Auth::user()->hasRole('teaching-assistant'))
+              <a href="/dashboard/">
+                  {{-- {{ Auth::user()->getRoleNames() }} --}}
+                  <p class="text-white font-bold cursor-pointer mr-6">DASHBOARD</p>
+              </a>
+              @endif       
+            @else
+              <p class="text-white font-bold cursor-pointer mr-6">EDUCATION</p>
             <p class="text-white font-bold cursor-pointer mr-6">CATALOG</p>
             <p class="text-white font-bold cursor-pointer mr-6">OPPORTUNITIES</p>
             <p class="text-white font-bold cursor-pointer mr-6">COURSES</p>
             <p class="text-white font-bold cursor-pointer mr-6">ACHIEVMENTS</p>
-            <p class="text-white font-bold cursor-pointer mr-6">HOW IT WORKS</p> --}}
+            <p class="text-white font-bold cursor-pointer mr-6">HOW IT WORKS</p>
+            @endif
+            
         </div>
         <div class="flex w-96 py-8 bg-text text-center justify-center">
             <a href="/logout"><p class="text-white font-bold text-center cursor-pointer">LOGOUT</p></a>
